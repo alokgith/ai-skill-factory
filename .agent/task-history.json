@@ -28,6 +28,11 @@
     {
       "task": "add_readme_roadmap",
       "date": "2026-10-18",
+      "commit": "7bd9dfa"
+    },
+    {
+      "task": "sync_docs_index",
+      "date": "2026-10-18",
       "commit": null
     }
   ]
