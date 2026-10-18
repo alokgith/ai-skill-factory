@@ -118,6 +118,11 @@
     {
       "task": "add_registry_schema_docs",
       "date": "2026-10-18",
+      "commit": "d0c8cd1"
+    },
+    {
+      "task": "add_task_authoring_guide",
+      "date": "2026-10-18",
       "commit": null
     }
   ]
