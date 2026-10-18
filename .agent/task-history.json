@@ -13,6 +13,11 @@
     {
       "task": "add_readme_how_it_works",
       "date": "2026-10-18",
+      "commit": "c6f3cba"
+    },
+    {
+      "task": "add_readme_automation",
+      "date": "2026-10-18",
       "commit": null
     }
   ]
