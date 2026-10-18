@@ -128,6 +128,11 @@
     {
       "task": "add_github_setup_guide",
       "date": "2026-10-18",
+      "commit": "a578175"
+    },
+    {
+      "task": "add_llm_integration_design",
+      "date": "2026-10-18",
       "commit": null
     }
   ]
