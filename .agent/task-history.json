@@ -8,6 +8,11 @@
     {
       "task": "add_validation",
       "date": "2026-10-18",
+      "commit": "7c9e0d3"
+    },
+    {
+      "task": "add_readme_how_it_works",
+      "date": "2026-10-18",
       "commit": null
     }
   ]
