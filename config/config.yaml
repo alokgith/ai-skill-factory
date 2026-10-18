@@ -5,6 +5,10 @@ daily_automation:
   min_commits: 3
   max_commits: 8
   run_tests: true          # run pytest after each task, before committing
+  fill_commits: true       # if real tasks run out, top up to the daily target
+                         # with trivial heartbeat commits (.agent/heartbeat.log).
+                         # Temporary: exercises the commit pipeline until the LLM
+                         # layer lands. Set to false to disable.
 
 tasks:
   avoid_recent_days: 7     # default cooldown before a task may repeat

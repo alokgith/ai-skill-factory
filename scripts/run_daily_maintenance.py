@@ -51,6 +51,11 @@ def print_preview(engine: TaskEngine) -> None:
         print(f"{i}. {task.commit_subject}")
     if not preview.selected:
         print("(nothing selected)")
+    if engine.config.fill_commits:
+        shortfall = preview.target - len(preview.selected)
+        if shortfall > 0:
+            print(f"\nfill_commits is on: {shortfall} placeholder heartbeat commit(s) "
+                  "would top up the run.")
     print("\nNote: tasks that depend on earlier ones (e.g. README sections) can become")
     print("applicable during a real run, so a live run may select slightly differently.")
     print("\nNo files modified.\nNo commits created.")

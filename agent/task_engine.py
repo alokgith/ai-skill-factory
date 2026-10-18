@@ -9,7 +9,7 @@ from __future__ import annotations
 import hashlib
 import random
 from dataclasses import dataclass, field
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Callable, Sequence
 
@@ -160,6 +160,8 @@ class TaskEngine:
         self._phase("main", result.target - reserve, result)
         self._phase("finalize", result.target, result)
         self._phase("main", result.target, result)
+        if self.config.fill_commits and len(result.committed) < result.target:
+            self._fill(result)
         if result.committed:
             result.final_problems = self.validator(self.root, [], True)
         return result
@@ -213,6 +215,51 @@ class TaskEngine:
         entry.commit = sha
         result.committed.append(CommittedTask(task.name, task.commit_subject, sha))
         self.log(f"  + {sha} {task.commit_subject}")
+
+    HEARTBEAT_PATH = ".agent/heartbeat.log"
+
+    def _fill(self, result: RunResult) -> None:
+        """Top up the run to its target with trivial heartbeat commits.
+
+        Placeholder for the future LLM layer: proves the commit pipeline
+        (safety check -> validate -> commit) without doing real work.
+        """
+        target = min(result.target, self.config.max_commits)
+        heartbeat = self.root / self.HEARTBEAT_PATH
+        seq = 0
+        while len(result.committed) < target:
+            seq += 1
+            stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
+            heartbeat.parent.mkdir(parents=True, exist_ok=True)
+            with heartbeat.open("a", encoding="utf-8") as fh:
+                fh.write(f"{stamp} run={self.today.isoformat()} seq={seq}\n")
+            report = self.cm.check_safety((self.HEARTBEAT_PATH,), (self.config.history_path,))
+            if not report.ok:
+                self.cm.rollback()
+                result.failed.append(("heartbeat", "safety: " + "; ".join(report.reasons)))
+                return
+            problems = self.validator(self.root, report.changed_files, False)
+            if problems:
+                self.cm.rollback()
+                result.failed.append(("heartbeat", "validation: " + "; ".join(problems)))
+                return
+            entry = self.history.record("heartbeat", self.today.isoformat(), None)
+            try:
+                self.history.save()
+                subject = f"chore: heartbeat {stamp}"
+                sha = self.cm.commit_all(
+                    f"{subject}\n\nPlaceholder commit to exercise the automation pipeline.\n\n"
+                    f"Task: heartbeat\nRun-Date: {self.today.isoformat()}\n"
+                    "Generated-by: AI Skill Factory task engine (phase 1, no LLM)\n"
+                )
+            except Exception as exc:
+                self.history.remove(entry)
+                self.cm.rollback()
+                result.failed.append(("heartbeat", f"commit error: {exc}"))
+                return
+            entry.commit = sha
+            result.committed.append(CommittedTask("heartbeat", subject, sha))
+            self.log(f"  + {sha} {subject}")
 
     def _message(self, task: Task) -> str:
         return (

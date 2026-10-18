@@ -32,6 +32,7 @@ class Config:
         "LICENSE*",
         "config/config.yaml",
     )
+    fill_commits: bool = False
     future_llm_enabled: bool = False
 
     def validate(self) -> None:
@@ -91,6 +92,7 @@ def config_from_dict(data: dict[str, Any]) -> Config:
             safety, "max_lines_added_per_task", int, d.max_lines_added_per_task
         ),
         protected_paths=tuple(protected),
+        fill_commits=_typed(daily, "fill_commits", bool, d.fill_commits),
         future_llm_enabled=_typed(llm, "enabled", bool, d.future_llm_enabled),
     )
     config.validate()
