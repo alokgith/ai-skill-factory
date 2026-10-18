@@ -113,6 +113,11 @@
     {
       "task": "add_skill_guidelines",
       "date": "2026-10-18",
+      "commit": "6309dd3"
+    },
+    {
+      "task": "add_registry_schema_docs",
+      "date": "2026-10-18",
       "commit": null
     }
   ]
