@@ -58,6 +58,11 @@
     {
       "task": "add_registry_validator_tests",
       "date": "2026-10-18",
+      "commit": "fa52911"
+    },
+    {
+      "task": "add_malformed_metadata_tests",
+      "date": "2026-10-18",
       "commit": null
     }
   ]
