@@ -123,6 +123,11 @@
     {
       "task": "add_task_authoring_guide",
       "date": "2026-10-18",
+      "commit": "3a6eb02"
+    },
+    {
+      "task": "add_github_setup_guide",
+      "date": "2026-10-18",
       "commit": null
     }
   ]
