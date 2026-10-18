@@ -23,6 +23,11 @@
     {
       "task": "add_readme_development",
       "date": "2026-10-18",
+      "commit": "ca47dbc"
+    },
+    {
+      "task": "add_readme_roadmap",
+      "date": "2026-10-18",
       "commit": null
     }
   ]

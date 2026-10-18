@@ -66,3 +66,12 @@ tests/      pytest suite
 
 Run the tests with `python -m pytest`. To add automation, write a new task in
 `agent/task_registry.py` (see CONTRIBUTING.md).
+
+## Roadmap
+
+- **Phase 1 (now):** deterministic maintenance - tasks, safety, scheduling, history.
+- **Phase 2:** LLM-powered researcher, architect, writer and critic agents that add tasks to
+  the same engine and populate `registry/skills.yaml`.
+- **Phase 3:** automated skill evaluation, publishing and long-term maintenance.
+
+Details: [docs/roadmap.md](docs/roadmap.md).
