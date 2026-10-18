@@ -108,6 +108,11 @@
     {
       "task": "add_configuration_docs",
       "date": "2026-10-18",
+      "commit": "13e78c8"
+    },
+    {
+      "task": "add_skill_guidelines",
+      "date": "2026-10-18",
       "commit": null
     }
   ]
