@@ -1,0 +1,23 @@
+# Configuration for the daily maintenance automation. See docs/configuration.md
+# (added by the add_configuration_docs task) for a description of each key.
+daily_automation:
+  enabled: true
+  min_commits: 3
+  max_commits: 8
+  run_tests: true          # run pytest after each task, before committing
+
+tasks:
+  avoid_recent_days: 7     # default cooldown before a task may repeat
+  history_file: .agent/task-history.json
+
+safety:
+  max_changed_files_per_task: 5
+  max_lines_added_per_task: 300
+  protected_paths:         # tasks may never modify these
+    - ".github/workflows/*"
+    - ".git/*"
+    - "LICENSE*"
+    - "config/config.yaml"
+
+future_llm:
+  enabled: false           # no LLM layer exists in Phase 1; must stay false

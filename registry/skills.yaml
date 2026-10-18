@@ -1,0 +1,16 @@
+# Skill registry. The future LLM agent will populate this file.
+#
+# Each entry has the following fields:
+#   id:          unique kebab-case identifier, e.g. "pdf-summarizer"
+#   name:        human-readable name
+#   description: one sentence describing when the skill should be used
+#   status:      draft | tested | published | deprecated
+#   path:        directory containing the skill's SKILL.md, e.g. "skills/pdf-summarizer"
+#
+# Example (commented out):
+#   - id: pdf-summarizer
+#     name: PDF Summarizer
+#     description: Summarize long PDF documents into bullet points.
+#     status: draft
+#     path: skills/pdf-summarizer
+skills: []
