@@ -143,6 +143,11 @@
     {
       "task": "add_commit_conventions",
       "date": "2026-10-19",
+      "commit": "827451f"
+    },
+    {
+      "task": "add_glossary",
+      "date": "2026-10-19",
       "commit": null
     }
   ]
