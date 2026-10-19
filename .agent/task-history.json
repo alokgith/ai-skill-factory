@@ -138,6 +138,11 @@
     {
       "task": "update_changelog",
       "date": "2026-10-18",
+      "commit": "bb58a4d"
+    },
+    {
+      "task": "add_commit_conventions",
+      "date": "2026-10-19",
       "commit": null
     }
   ]
