@@ -148,6 +148,11 @@
     {
       "task": "add_glossary",
       "date": "2026-10-19",
+      "commit": "bf116d6"
+    },
+    {
+      "task": "add_pr_template",
+      "date": "2026-10-19",
       "commit": null
     }
   ]
