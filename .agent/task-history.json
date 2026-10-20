@@ -168,6 +168,11 @@
     {
       "task": "add_skill_proposal_template",
       "date": "2026-10-20",
+      "commit": "1232ba5"
+    },
+    {
+      "task": "add_issue_template_config",
+      "date": "2026-10-20",
       "commit": null
     }
   ]
