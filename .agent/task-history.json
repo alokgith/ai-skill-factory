@@ -158,6 +158,11 @@
     {
       "task": "add_bug_report_template",
       "date": "2026-10-20",
+      "commit": "664aa4b"
+    },
+    {
+      "task": "add_feature_request_template",
+      "date": "2026-10-20",
       "commit": null
     }
   ]
