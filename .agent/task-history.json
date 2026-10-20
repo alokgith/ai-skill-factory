@@ -163,6 +163,11 @@
     {
       "task": "add_feature_request_template",
       "date": "2026-10-20",
+      "commit": "1c17cfd"
+    },
+    {
+      "task": "add_skill_proposal_template",
+      "date": "2026-10-20",
       "commit": null
     }
   ]
