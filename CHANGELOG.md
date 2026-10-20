@@ -5,6 +5,15 @@ automatically by the `update_changelog` task, one per completed task.
 
 ## [Unreleased]
 
+- chore: add editorconfig (`add_editorconfig`, 2026-10-20) <!-- task:add_editorconfig@2026-10-20 -->
+- docs: add security policy (`add_security_policy`, 2026-10-20) <!-- task:add_security_policy@2026-10-20 -->
+- chore: add issue template chooser config (`add_issue_template_config`, 2026-10-20) <!-- task:add_issue_template_config@2026-10-20 -->
+- chore: add skill proposal issue template (`add_skill_proposal_template`, 2026-10-20) <!-- task:add_skill_proposal_template@2026-10-20 -->
+- chore: add feature request issue template (`add_feature_request_template`, 2026-10-20) <!-- task:add_feature_request_template@2026-10-20 -->
+- chore: add bug report issue template (`add_bug_report_template`, 2026-10-20) <!-- task:add_bug_report_template@2026-10-20 -->
+- chore: add pull request template (`add_pr_template`, 2026-10-19) <!-- task:add_pr_template@2026-10-19 -->
+- docs: add project glossary (`add_glossary`, 2026-10-19) <!-- task:add_glossary@2026-10-19 -->
+- docs: add commit message conventions (`add_commit_conventions`, 2026-10-19) <!-- task:add_commit_conventions@2026-10-19 -->
 - docs: add future LLM integration design (`add_llm_integration_design`, 2026-10-18) <!-- task:add_llm_integration_design@2026-10-18 -->
 - docs: add GitHub setup guide (`add_github_setup_guide`, 2026-10-18) <!-- task:add_github_setup_guide@2026-10-18 -->
 - docs: add task authoring guide (`add_task_authoring_guide`, 2026-10-18) <!-- task:add_task_authoring_guide@2026-10-18 -->
