@@ -173,6 +173,11 @@
     {
       "task": "add_issue_template_config",
       "date": "2026-10-20",
+      "commit": "0b44afd"
+    },
+    {
+      "task": "add_security_policy",
+      "date": "2026-10-20",
       "commit": null
     }
   ]
