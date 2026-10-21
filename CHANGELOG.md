@@ -5,6 +5,10 @@ automatically by the `update_changelog` task, one per completed task.
 
 ## [Unreleased]
 
+- docs: add hello-world example skill (`add_example_skill`, 2026-10-21) <!-- task:add_example_skill@2026-10-21 -->
+- docs: add skills directory README (`add_skills_readme`, 2026-10-21) <!-- task:add_skills_readme@2026-10-21 -->
+- docs: add skill template (`add_skill_template`, 2026-10-21) <!-- task:add_skill_template@2026-10-21 -->
+- chore: add Makefile with common commands (`add_makefile`, 2026-10-21) <!-- task:add_makefile@2026-10-21 -->
 - chore: add editorconfig (`add_editorconfig`, 2026-10-20) <!-- task:add_editorconfig@2026-10-20 -->
 - docs: add security policy (`add_security_policy`, 2026-10-20) <!-- task:add_security_policy@2026-10-20 -->
 - chore: add issue template chooser config (`add_issue_template_config`, 2026-10-20) <!-- task:add_issue_template_config@2026-10-20 -->
