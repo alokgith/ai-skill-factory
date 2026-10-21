@@ -188,6 +188,11 @@
     {
       "task": "update_changelog",
       "date": "2026-10-20",
+      "commit": "e20cf22"
+    },
+    {
+      "task": "add_makefile",
+      "date": "2026-10-21",
       "commit": null
     }
   ]
