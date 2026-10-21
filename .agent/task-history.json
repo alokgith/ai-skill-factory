@@ -208,6 +208,11 @@
     {
       "task": "add_example_skill",
       "date": "2026-10-21",
+      "commit": "f45397d"
+    },
+    {
+      "task": "sync_docs_index",
+      "date": "2026-10-21",
       "commit": null
     }
   ]
